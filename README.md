@@ -4,5 +4,5 @@ Return the latest 5 (or less) versions of a particular NPM library, using the Li
 
 ## Frameworks
 
-*AngularJS* - Because at the moment I'm quicker in Angular than React
-*Bootstrap* - Useful for fast web app prototyping 
+* *AngularJS* - Because at the moment I'm quicker in Angular than React
+* *Bootstrap* - Useful for fast web app prototyping 
