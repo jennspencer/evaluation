@@ -10,10 +10,14 @@
 		    $http.get($scope.url).then(function(response) {
         	    projects = response.data;
         	    $scope.projects = projects;
+                
     	    }).catch(function(error){
     		    console.log(error);
     	    });
 	    };
+        
+        $scope.versionLimit = 5;
+
     }); 
 
 })();
