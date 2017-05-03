@@ -14,10 +14,26 @@
 
         <div class="container" ng-controller="ProjectController">
 
-            <input class="search" type="text" placeholder="Search" ng-model="searchString"/> <button ng-click="searchProjects()" class="btn btn-primary">Search!</button>
-            <br />
+            <h1 class="page-header">NPM Library Fetcher</h1>
 
-            <div class="panel-group">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search"  ng-model="searchString">
+                    <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" ng-click="searchProjects()">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    </div>
+                </div>
+            </form>
+
+            <hr />
+            
+            <h4 ng-if="errorMessage" ng-cloak>Sorry, no libraries were found with that name. Please check your entry and try again.</h4>
+
+            <h4 class="thinking" ng-if="thinking"><i class="glyphicon glyphicon-refresh"></i></h4>
+
+            <div class="panel-group" ng-cloak>
                 <div class="panel panel-default" ng-repeat="project in projects">
                     <div class="panel-heading">
                         <h4 class="panel-title" data-toggle="collapse" data-target="#versions-{{ $index }}">
